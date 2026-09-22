@@ -1,1 +1,138 @@
+//JAVA PROGRAMMING LANGUAGE 
+//CODE PROPER
+//SYNTAX
+
+import java.util.Scanner; //CALLING OUT THE JAVA SCANNER
+
+public class Main {
+    public static void main(String[]args){
+    Scanner scanner() =new Scanner(System.in); //TO GET THE VARIABLE OR CALL THE SCANNER
+
+//DECLARING THE OUTPUR FUNCTION OF JAVA
+    System.out.println("Hello World!");
+        
+//DATA TYPES OF JAVA
+//int; //WHOLE NUMBER
+//double; //DOUBLE PRECISIONS OF DECIMAL NUMBER
+//float; //SINGLE PRESICIONS OF DECIMAL NUMBER
+//'f';//HOW MANY DECIMAL PLACES.
+//char; //SINGLE CHARACTER USING A SINGLE QUOTES ('')
+//boolean;//TRUE OR FALSE
+//String; // NOT PRIMITIVE TEXT
+
+//DECLARING VARIABLES OF DIFF TYPES
+    int         age     =      20            ;
+//   ^           ^      ^      ^             ^
+// TYPES        var    EQ      value     close tag
+
+double price = 67.3;
+float weight = 60.2f;
+char grade = 'S';
+boolean isStudent = true;
+String name = mikho;
+
+//OUTPUT USING System.out.println
+
+System.out.println("Name: " + name);
+System.out.println("Weight: " + weight);
+System.out.println("Price: " + price);
+System.out.println("Student?: " + isStudent);
+System.out.println("Grade: " + grade);
+
+//GETTING INPUT FUNCTION USING SCANNER
+//READ ONE WORD AND STOPS AT WHITESPACE
+
+System.out.println("\nEnter the City: ");
+String yourcity = scanner(); //READ ONE WORD AT THE WHITESPACE.
+System.out.println("You live in: " +yourcity);
+
+//READING A FULL LINE (INCLUDING SPACES)
+
+scanner.nextline(); //CLEAR LEFTOVER NEWLINE FROM THE PREVIOUS NEXT()
+        System.out.println("Enter a sentence about your lelf: ");
+        String fullSentence = scanner.nextline(); //READ THE ENTIRE LINE
+        System.out.println("You said: " + fullSentence);
+
+// OPERATOR & EXPRESSIONS
+// +, -, *, /, %, &&, ||, !, ==, <, >, <=, >=, !=, +=, -=, *=, /=
+//ARITHMETIC OPERATORS
+
+        int a = 27, b = 21;
+        System.out.println("a + b" + (a+b));
+        System.out.println("a - b" + (a-b));
+        System.out.println("a * b" + (a*b));
+        System.out.println("a / b" + (a/b));
+        System.out.println("a % b" + (a%b));
+
+        double x = 10, y = 2;
+        System.out.println("x/y =" + (x/ y));
+
+        //RELATIONAL OPERATORS (RETURN BOOL: 1 or 0) TRUE OR FALSE
+        //==, <, >, >=, <=, !=
+        System.out.println("\na == b: " +(a==b));
+        System.out.println("\na != b: " +(a!=b));
+        System.out.println("\na > b: " +(a>b));
+        System.out.println("\na < b: " +(a<b));
+        System.out.println("\na >= b: " +(a>=b));
+        System.out.println("\na <= b: " +(a<=b));
+
+        //LOGICAL OPERATORS
+        //&&, ||, !
+        boolean p= true, q= false;
+        System.out.println("\np && q: " + (p && q)); //false
+        System.out.println("p || q: " + (p || q)); //true
+        System.out.println("!q: " + (!q)); //true
+        System.out.println("!p: " + (!p)); //false
+
+        //ASSISGNMENT OPERATORS
+        //+=, -=, *=, /=
+
+        int score = 50;
+        score += 10;
+        System.out.println("\n score after += 10: "+ score); //60
+        score *=2;
+        System.out.println("score after *=2: "+score); //120
+
+        //INCREMENT / DECREMENT EXPRESSIONS
+        int counter = 5;
+        System.out.println("\ncounter ++ (post)"+ counter++);//
+        System.out.println("counter now: "+ counter); //6
+        System.out.println("++counter (pre): "+ ++counter); //27
+
+        //CONTROL FLOW (IF/ELSE CONDITION, SWITCH CASE STATEMENT, LOOPS(for, while, do while) ).
+        // if / else
+
+        System.out.println("Enter your your exam score:");
+        int Examscore = scanner.nextInt();
+
+        if (Examscore >= 90){
+            System.out.println("Grade: A");
+        } else if (Examscore >= 80){
+            System.out.println("Grade: B");
+        } else if (Examscore >= 70){
+            System.out.println("Grade: C");
+        } else {
+            System.out.println("Grade: F");
+        }
+
+//SWITCH CASE STATEMENT
+
+        switch(day){
+            case 1: System.out.println("Monday"); break;
+            case 2: System.out.println("Tuesday"); break;
+            case 3: System.out.println("Wednesday"); break;
+            case 4: System.out.println("Thursday"); break;
+            case 5: System.out.println("Friday"); break;
+            case 6: System.out.println("Saturday"); break;
+            case 7: System.out.println("Sunday"); break;
+            default: System.out.println("Invalid day"); break;
+        }
+
+
+scanner.close();
+
+        }
+    }
+
+
 
