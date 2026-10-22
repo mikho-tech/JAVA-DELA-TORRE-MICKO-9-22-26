@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("Enter your Name: ");
+            String name = scanner.nextLine();
+
+            System.out.print("Enter your Age: ");
+            int age = scanner.nextInt();
+
+            double hci;
+            do {
+                System.out.print("Enter your grade in HCI (0-100): ");
+                hci = scanner.nextDouble();
+                if (hci < 0 || hci > 100) {
+                    System.out.println("Invalid! Grade must be between 0 and 100.");
+                }
+            } while (hci < 0 || hci > 100);
+
+            double cc;
+            do {
+                System.out.print("Enter your grade in CC103 (0-100): ");
+                cc = scanner.nextDouble();
+                if (cc < 0 || cc > 100) {
+                    System.out.println("Invalid! Grade must be between 0 and 100.");
+                }
+            } while (cc < 0 || cc > 100);
+
+            double net;
+            do {
+                System.out.print("Enter your grade in Networking (0-100): ");
+                net = scanner.nextDouble();
+                if (net < 0 || net > 100) {
+                    System.out.println("Invalid! Grade must be between 0 and 100.");
+                }
+            } while (net < 0 || net > 100);
+
+            double ave = (hci + cc + net) / 3;
+            
+            scanner.nextLine();
+
+            System.out.print("Still continue Y/N: ");
+            String cons = scanner.nextLine();
+
+            System.out.println("=======RESULT======");
+            System.out.println("Your name is: " + name);
+            System.out.println("Your age is: " + age);
+            System.out.println("Your grade in HCI is: " + hci);
+            System.out.println("Your grade in CC103 is: " + cc);
+            System.out.println("Your grade in Networking is: " + net);
+            System.out.printf("Your average is: %.2f%n", ave );
+            if (ave < 75) {
+                    System.out.println("Grade status: Failed");
+            } else {
+                    System.out.println("Grade status: Passed"); 
+            }
+            
+            System.out.println();
+            if (!(cons.equalsIgnoreCase("y") || cons.equalsIgnoreCase("yes"))) {
+                break;
+            }
+        }
+    }
+}
